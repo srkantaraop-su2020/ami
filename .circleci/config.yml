@@ -27,7 +27,7 @@ jobs:
           command: ./packer validate ubuntu-ami.json
       - run:
           name: Build AMI
-          command: ./buildAmi.sh
+          command: ./packer build ubuntu-ami.json
 workflows:
   version: 2
   build-ami:
