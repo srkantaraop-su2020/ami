@@ -11,4 +11,4 @@ Follow below steps in order to use the packer template application.
 
 ## Running an instance of the AMI image
 
-Launch the AMI image using the generated image under EC2 in the AWS console
+Launch the AMI image using the generated image under EC2 in the AWS console 
