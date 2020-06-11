@@ -6,7 +6,7 @@
         "subnet_id": "",
         "source_ami": "",
         "ami_users": "",
-        "ssh_username": ""
+        "ssh_username": "ubuntu"
     },
     "builders": [
         {
