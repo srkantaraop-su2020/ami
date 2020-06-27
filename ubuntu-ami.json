@@ -37,7 +37,13 @@
             "inline": [
                 "sudo apt-get update",
                 "curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -",
-                "sudo apt-get install -y nodejs"
+                "sudo apt-get install -y nodejs",
+                "sudo apt install ruby -y",
+                "sudo apt-get install wget -y",
+                "cd /home/ubuntu",
+                "wget https://aws-codedeploy-{{user `aws_region`}}.s3.{{user `aws_region`}}.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto"
             ]
         }
     ]
