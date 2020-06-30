@@ -4,8 +4,8 @@
         "aws_secret_key": "",
         "aws_region": "us-east-1",
         "subnet_id": "",
-        "source_ami": "ami-068663a3c619dd892",
-        "ami_users": "193914830445,322766578769",
+        "source_ami": "ami-07ebfd5b3428b6f4d",
+        "ami_users": "",
         "ssh_username": "ubuntu"
     },
     "builders": [
@@ -37,7 +37,13 @@
             "inline": [
                 "sudo apt-get update",
                 "curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -",
-                "sudo apt-get install -y nodejs"
+                "sudo apt-get install -y nodejs",
+                "sudo apt-get install ruby -y",
+                "sudo apt-get install wget -y",
+                "cd /home/ubuntu",
+                "wget https://aws-codedeploy-{{user `aws_region`}}.s3.{{user `aws_region`}}.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto"
             ]
         }
     ]
